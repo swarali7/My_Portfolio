@@ -76,7 +76,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
           >
             <a 
-              href="https://www.linkedin.com/in/swaralikestikar" 
+              href="https://www.linkedin.com/in/swarali-k" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary hover:scale-110 transition-all"
@@ -85,7 +85,7 @@ const Hero = () => {
               <Linkedin className="w-6 h-6" />
             </a>
             <a 
-              href="https://github.com/swaralikestikar" 
+              href="https://github.com/swarali7"
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary hover:scale-110 transition-all"
