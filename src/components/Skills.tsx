@@ -1,5 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Code, Database, Cloud, Wrench } from "lucide-react";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 const skillCategories = [
   {
@@ -25,20 +28,34 @@ const skillCategories = [
 ];
 
 const Skills = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-    <section id="skills" className="py-24 px-4 bg-muted/30">
+    <section id="skills" className="py-24 px-4 bg-muted/30" ref={ref}>
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+        <motion.h2 
+          className="text-4xl md:text-5xl font-bold text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+        >
           Technical <span className="text-gradient">Skills</span>
-        </h2>
+        </motion.h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((category, index) => {
             const Icon = category.icon;
             return (
-              <Card 
+              <motion.div
                 key={index}
-                className="p-6 bg-card/50 backdrop-blur border-border hover:card-glow transition-all duration-300"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.4, delay: 0.1 + index * 0.05 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <Card
+                className="p-6 bg-card/50 backdrop-blur border-border hover:card-glow transition-all duration-300 h-full"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 rounded-lg bg-primary/10">
@@ -57,6 +74,7 @@ const Skills = () => {
                   ))}
                 </div>
               </Card>
+              </motion.div>
             );
           })}
         </div>

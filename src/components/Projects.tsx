@@ -1,6 +1,9 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Code2 } from "lucide-react";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 const projects = [
   {
@@ -26,18 +29,32 @@ const projects = [
 ];
 
 const Projects = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-    <section id="projects" className="py-24 px-4">
+    <section id="projects" className="py-24 px-4" ref={ref}>
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+        <motion.h2 
+          className="text-4xl md:text-5xl font-bold text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+        >
           Featured <span className="text-gradient">Projects</span>
-        </h2>
+        </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card 
+            <motion.div
               key={index}
-              className="p-8 bg-card/50 backdrop-blur border-border hover:card-glow transition-all duration-300 group"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
+              whileHover={{ y: -8 }}
+            >
+              <Card
+              className="p-8 bg-card/50 backdrop-blur border-border hover:card-glow transition-all duration-300 group h-full"
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="p-3 rounded-lg bg-primary/10">
@@ -70,6 +87,7 @@ const Projects = () => {
                 ))}
               </div>
             </Card>
+            </motion.div>
           ))}
         </div>
       </div>

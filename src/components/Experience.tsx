@@ -1,5 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Briefcase, Calendar, Award } from "lucide-react";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 const experiences = [
   {
@@ -28,22 +31,40 @@ const experiences = [
 ];
 
 const Experience = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-    <section id="experience" className="py-24 px-4 bg-muted/30">
+    <section id="experience" className="py-24 px-4 bg-muted/30" ref={ref}>
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+        <motion.h2 
+          className="text-4xl md:text-5xl font-bold text-center mb-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+        >
           Work <span className="text-gradient">Experience</span>
-        </h2>
+        </motion.h2>
         
-        <div className="flex items-center justify-center gap-2 mb-16 text-muted-foreground">
+        <motion.div 
+          className="flex items-center justify-center gap-2 mb-16 text-muted-foreground"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
           <Award className="w-5 h-5 text-primary" />
           <p className="text-sm">Gold & Silver Global Recognition Awards recipient</p>
-        </div>
+        </motion.div>
 
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <Card 
+            <motion.div
               key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
+            >
+              <Card
               className="p-8 bg-card/50 backdrop-blur border-border hover:card-glow transition-all duration-300"
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
@@ -72,6 +93,7 @@ const Experience = () => {
                 ))}
               </ul>
             </Card>
+            </motion.div>
           ))}
         </div>
       </div>
