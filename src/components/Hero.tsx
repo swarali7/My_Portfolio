@@ -68,8 +68,6 @@ const Hero = () => {
               <a 
                 href="/Swarali_Kestikar_Resume.pdf"
                 download="Swarali_Kestikar_Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 Download Resume
                 <FileDown className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform" />
