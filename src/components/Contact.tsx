@@ -114,15 +114,6 @@ const Contact = () => {
                   </Button>
                 </div>
               </div>
-
-              <div className="pt-6">
-                <Button size="lg" className="w-full hover:scale-105 transition-transform" asChild>
-                  <a href="mailto:swarali1999@gmail.com">
-                    <Mail className="w-4 h-4 mr-2" />
-                    Send Me an Email
-                  </a>
-                </Button>
-              </div>
             </div>
           </div>
         </Card>
