@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowDown, FileDown } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import { motion } from "framer-motion";
 
@@ -62,6 +62,16 @@ const Hero = () => {
               <a href="#contact">
                 Get In Touch
                 <Mail className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </Button>
+            <Button size="lg" variant="outline" className="group" asChild>
+              <a 
+                href="https://drive.google.com/uc?export=download&id=1aNIPDDXwsiuqt7dNz2I3EW4bGwSgGDxv"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download Resume
+                <FileDown className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform" />
               </a>
             </Button>
             <Button size="lg" variant="secondary" asChild>
