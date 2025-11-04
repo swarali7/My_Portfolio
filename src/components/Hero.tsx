@@ -66,11 +66,12 @@ const Hero = () => {
             </Button>
             <Button size="lg" variant="outline" className="group" asChild>
               <a 
-                href="https://drive.google.com/file/d/1aNIPDDXwsiuqt7dNz2I3EW4bGwSgGDxv/view"
+                href="/Swarali_Kestikar_Resume.pdf"
+                download="Swarali_Kestikar_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                View Resume
+                Download Resume
                 <FileDown className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform" />
               </a>
             </Button>
