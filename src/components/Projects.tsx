@@ -56,11 +56,10 @@ const Projects = () => {
               <Card
               className="p-8 bg-card/50 backdrop-blur border-border hover:card-glow transition-all duration-300 group h-full"
             >
-              <div className="flex items-start justify-between mb-4">
+              <div className="flex items-start mb-4">
                 <div className="p-3 rounded-lg bg-primary/10">
                   <Code2 className="w-6 h-6 text-primary" />
                 </div>
-                <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
 
               <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
