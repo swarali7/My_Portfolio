@@ -16,7 +16,7 @@ const Hero = () => {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
       
-      <div className="container mx-auto px-4 relative z-10 pt-20">
+      <div className="container mx-auto px-4 relative z-10 pt-16 sm:pt-20">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <motion.div 
             className="space-y-4"
@@ -53,7 +53,7 @@ const Hero = () => {
           </motion.p>
 
           <motion.div 
-            className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center items-center w-full sm:w-auto px-4 sm:px-0"
+            className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center w-full sm:w-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
