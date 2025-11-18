@@ -44,7 +44,7 @@ const Projects = () => {
           Featured <span className="text-gradient">Projects</span>
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}

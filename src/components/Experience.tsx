@@ -67,14 +67,14 @@ const Experience = () => {
               <Card
               className="p-8 bg-card/50 backdrop-blur border-border hover:card-glow transition-all duration-300"
             >
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 md:gap-4 mb-6">
                 <div className="flex items-start gap-4">
                   <div className="p-3 rounded-lg bg-primary/10">
                     <Briefcase className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold">{exp.company}</h3>
-                    <p className="text-lg text-foreground/90">{exp.role}</p>
+                    <h3 className="text-xl sm:text-2xl font-bold">{exp.company}</h3>
+                    <p className="text-base sm:text-lg text-foreground/90">{exp.role}</p>
                     <p className="text-sm text-muted-foreground">{exp.location}</p>
                   </div>
                 </div>
