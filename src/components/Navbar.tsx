@@ -90,7 +90,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-border shadow-lg animate-in slide-in-from-top duration-300">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-border shadow-lg animate-in slide-in-from-top duration-300 z-50">
             <div className="container mx-auto px-4 py-4">
               <div className="flex flex-col gap-4">
                 {navItems.map((item) => (
@@ -117,7 +117,7 @@ const Navbar = () => {
       {/* Mobile Menu Backdrop */}
       {isMobileMenuOpen && (
         <div 
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden"
+          className="fixed top-16 left-0 right-0 bottom-0 bg-black/50 backdrop-blur-sm z-40 md:hidden"
           onClick={() => setIsMobileMenuOpen(false)}
         />
       )}
