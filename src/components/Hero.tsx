@@ -66,7 +66,7 @@ const Hero = () => {
             </Button>
             <Button size="lg" variant="outline" className="group w-full sm:w-auto min-h-[44px]" asChild>
               <a 
-                href="/Swarali_Kestikar_Resume.pdf"
+                href="/My_Portfolio/Swarali_Kestikar_Resume.pdf"
                 download="Swarali_Kestikar_Resume.pdf"
               >
                 Download Resume
