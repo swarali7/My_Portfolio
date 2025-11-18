@@ -25,7 +25,7 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
           >
             <motion.h1 
-              className="text-5xl md:text-7xl font-bold tracking-tight"
+              className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -33,7 +33,7 @@ const Hero = () => {
               Hi, I'm <span className="text-gradient">Swarali Kestikar</span>
             </motion.h1>
             <motion.p 
-              className="text-xl md:text-2xl text-muted-foreground"
+              className="text-lg sm:text-xl md:text-2xl text-muted-foreground"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -53,18 +53,18 @@ const Hero = () => {
           </motion.p>
 
           <motion.div 
-            className="flex flex-wrap gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center items-center w-full sm:w-auto px-4 sm:px-0"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <Button size="lg" className="group" asChild>
+            <Button size="lg" className="group w-full sm:w-auto min-h-[44px]" asChild>
               <a href="#contact">
                 Get In Touch
                 <Mail className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
-            <Button size="lg" variant="outline" className="group" asChild>
+            <Button size="lg" variant="outline" className="group w-full sm:w-auto min-h-[44px]" asChild>
               <a 
                 href="/Swarali_Kestikar_Resume.pdf"
                 download="Swarali_Kestikar_Resume.pdf"
@@ -73,7 +73,7 @@ const Hero = () => {
                 <FileDown className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform" />
               </a>
             </Button>
-            <Button size="lg" variant="secondary" asChild>
+            <Button size="lg" variant="secondary" className="w-full sm:w-auto min-h-[44px]" asChild>
               <a href="#projects">View Projects</a>
             </Button>
           </motion.div>
