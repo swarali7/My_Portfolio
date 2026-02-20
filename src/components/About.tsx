@@ -75,11 +75,10 @@ const About = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <p className="text-lg text-foreground/80 leading-relaxed">
-            I'm a software engineer with a passion for building robust, scalable systems. 
-            With experience at top tech companies and financial institutions, I've developed 
-            expertise in full-stack development, cloud infrastructure, and system optimization. 
-            I thrive on solving complex problems and creating innovative solutions that drive 
-            real business impact.
+            I'm a software engineer passionate about building robust, scalable systems. 
+            My experience at Amazon and Bank of America has shaped my expertise in full-stack 
+            development, cloud infrastructure, and system optimization. I thrive on solving 
+            complex problems and creating innovative solutions that drive real business impact.
           </p>
         </motion.div>
       </div>
