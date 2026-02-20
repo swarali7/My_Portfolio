@@ -7,23 +7,24 @@ import { useRef } from "react";
 
 const projects = [
   {
-    title: "Movie Ticket Booking System",
-    description: "Full-stack serverless application for movie ticket booking with automated data crawling and cloud infrastructure.",
-    technologies: ["React", "Python", "AWS Lambda", "DynamoDB", "S3", "API Gateway", "Selenium"],
+    title: "Adversarial Training for NLP",
+    description: "Advanced NLP model with span-level reconstruction to improve wall-clock training time and clean accuracy while maintaining robustness.",
+    technologies: ["Python", "PyTorch", "Transformers"],
     highlights: [
-      "Implemented Python script to crawl and scrape 30+ websites",
-      "Built serverless backend using AWS SDK and Lambda functions",
-      "Deployed React frontend on AWS EC2 instance",
+      "Reduced wall-clock training time by 5x by developing a Span Level Reconstruction (SLR) objective that captures multi-token semantic dependencies",
+      "Maintained 94.45% clean accuracy while significantly lowering computational overhead through advanced span-level reconstruction over baseline token methods",
+      "Stabilized performance within the first epoch by implementing selective masking of multi-token informative subsequences to enhance model semantic fidelity",
+      "Verified cross-architecture robustness transfer by architecting joint training regimes across RoBERTa and DeBERTa to enforce structural regularization",
     ],
   },
   {
-    title: "Bookstore Web Application",
-    description: "E-commerce platform with secure transactions, inventory management, and optimized user experience.",
-    technologies: ["React", "TypeScript", "Node.js", "Express.js", "MySQL", "Docker", "Jenkins"],
+    title: "Enterprise Bookstore Platform",
+    description: "Full-stack e-commerce platform with containerized microservices, persistent database, and CI/CD automation.",
+    technologies: ["React", "TypeScript", "Node.js", "Docker"],
     highlights: [
-      "Created full-stack e-commerce platform with secure payment processing",
-      "Integrated RESTful APIs with MongoDB and PostgreSQL",
-      "Implemented CI/CD pipelines for automated testing and deployment",
+      "Attained 100% build success rates and dev-to-prod parity by containerizing the microservices stack using Docker and automating CI/CD pipelines via GitHub Actions",
+      "Optimized data retrieval latency by implementing a persistent MySQL database with advanced indexing to handle high-volume transaction queries",
+      "Fortified transaction integrity and system reliability by developing a full-stack e-commerce engine with modular RESTful API integration and TypeScript type-safety",
     ],
   },
 ];
@@ -44,7 +45,7 @@ const Projects = () => {
           Featured <span className="text-gradient">Projects</span>
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}

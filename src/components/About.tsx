@@ -34,10 +34,10 @@ const About = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Virginia Tech</h3>
                   <p className="text-muted-foreground mb-1">Master of Science in Computer Science</p>
-                  <p className="text-sm text-muted-foreground">Aug 2024 - May 2026 | GPA: 3.83/4.00</p>
+                  <p className="text-sm text-muted-foreground">Aug 2024 - May 2026 | GPA: 3.88/4.00</p>
                   <div className="flex items-center gap-2 mt-2 text-sm text-muted-foreground">
                     <MapPin className="w-4 h-4" />
-                    <span>Virginia, USA</span>
+                    <span>Arlington, VA</span>
                   </div>
                 </div>
               </div>
@@ -55,7 +55,7 @@ const About = () => {
                   <GraduationCap className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Cummins College of Engineering</h3>
+                  <h3 className="text-xl font-semibold mb-2">MKSSS's Cummins College of Engineering for Women</h3>
                   <p className="text-muted-foreground mb-1">Bachelor of Technology in Computer Engineering</p>
                   <p className="text-sm text-muted-foreground">Aug 2018 - Jul 2021</p>
                   <div className="flex items-center gap-2 mt-2 text-sm text-muted-foreground">

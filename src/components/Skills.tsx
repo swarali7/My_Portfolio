@@ -8,22 +8,22 @@ const skillCategories = [
   {
     icon: Code,
     title: "Languages",
-    skills: ["C++", "Java", "Python", "JavaScript", "TypeScript", "Rust", "HTML/CSS"],
-  },
-  {
-    icon: Database,
-    title: "Databases",
-    skills: ["SQL", "MySQL", "PostgreSQL", "MongoDB", "NoSQL", "Oracle DB", "Hadoop"],
-  },
-  {
-    icon: Cloud,
-    title: "Cloud & DevOps",
-    skills: ["AWS (EC2, Lambda, S3)", "Azure", "GCP", "Docker", "Jenkins", "CI/CD", "Ansible"],
+    skills: ["Java", "Python", "Rust", "SQL", "JavaScript (ES6+)", "TypeScript", "HTML/CSS"],
   },
   {
     icon: Wrench,
-    title: "Tools & Frameworks",
-    skills: ["React.js", "Next.js", "Spring Boot", "Node.js", "REST APIs", "Git", "JIRA", "Tableau"],
+    title: "Frameworks & Web",
+    skills: ["React.js", "Next.js", "Node.js", "Express.js", "Spring Boot", "PyTorch", "Transformers", "REST"],
+  },
+  {
+    icon: Cloud,
+    title: "Cloud & Infrastructure",
+    skills: ["AWS (EC2, Lambda, S3, API Gateway)", "Microservices", "Azure", "Docker", "CI/CD (Jenkins, GitHub Actions)"],
+  },
+  {
+    icon: Database,
+    title: "Databases & Tools",
+    skills: ["MySQL", "PostgreSQL", "Oracle Database", "MongoDB", "Git", "Bitbucket", "Ansible", "JIRA", "Tableau"],
   },
 ];
 
@@ -43,7 +43,7 @@ const Skills = () => {
           Technical <span className="text-gradient">Skills</span>
         </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           {skillCategories.map((category, index) => {
             const Icon = category.icon;
             return (

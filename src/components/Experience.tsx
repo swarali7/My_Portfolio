@@ -11,9 +11,9 @@ const experiences = [
     location: "Seattle, WA",
     period: "May 2025 – August 2025",
     highlights: [
-      "Developed a Rust-based tool to track freshness of 100+ third-party packages, ensuring security compliance",
-      "Optimized package processing pipeline reducing execution time from 76 minutes to under 8 minutes (≈90% improvement)",
-      "Strengthened automation and observability in package lifecycle management",
+      "Reduced package processing execution time by 90% (76 to 8 minutes) by optimizing the data pipeline through Octocrab and Rayon for high-concurrency parallelization in Rust",
+      "Strengthened software supply chain security for 100+ packages by architecting an automated Rust-based freshness tracking tool to monitor upstream repository deltas",
+      "Mitigated enterprise-scale dependency risks by engineering a configurable staleness detection engine that systematically identifies and prioritizes security vulnerabilities",
     ],
   },
   {
@@ -22,10 +22,11 @@ const experiences = [
     location: "Mumbai, India",
     period: "June 2021 – August 2024",
     highlights: [
-      "Engineered high-performance Python-based financial applications, improving transaction efficiency by 50%",
-      "Implemented testing strategies that improved system stability by 45%",
-      "Led large-scale process re-engineering initiative, reducing paperwork by 70%",
-      "Automated operational workflows eliminating 40% of manual effort",
+      "Boosted transaction efficiency by 50% by engineering high-performance financial applications leveraging Python-based Quartz frameworks and Oracle Database clusters",
+      "Led a large-scale process re-engineering initiative, restructuring end-to-end service processes across 7 upstream systems and 2 downstream teams, reducing paperwork by 70% and enhancing cross-team collaboration",
+      "Eliminated 40% of manual operational overhead by automating mission-critical workflows and documentation generation using Python and Jenkins CI/CD scripting",
+      "Increased production environment stability by 45% through the design and implementation of modular unit, integration, and performance regression testing suites",
+      "Accelerated developer onboarding velocity by 25% by implementing automated technical documentation tools and optimizing cross-functional knowledge transfer protocols",
     ],
   },
 ];
@@ -53,7 +54,7 @@ const Experience = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           <Award className="w-5 h-5 text-primary" />
-          <p className="text-sm">Gold & Silver Global Recognition Awards recipient</p>
+          <p className="text-sm">Received dual Gold and Silver Awards for excellence in quality assurance and production resilience at Bank of America</p>
         </motion.div>
 
         <div className="space-y-8">
