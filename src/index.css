@@ -54,6 +54,8 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
     font-feature-settings: "cv11", "ss01";
     font-optical-sizing: auto;
+    background: linear-gradient(to bottom, hsl(220 26% 14%), hsl(220 26% 12%) 50%, hsl(220 26% 10%));
+    background-attachment: fixed;
   }
 
   html {
