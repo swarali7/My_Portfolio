@@ -33,7 +33,7 @@ const Recommendations = () => {
           <span className="text-gradient">Recommendations</span>
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-fr">
           {recommendations.map((rec, index) => (
             <motion.div
               key={index}
