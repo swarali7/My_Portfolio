@@ -40,11 +40,12 @@ const Recommendations = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="flex"
             >
-              <Card className="p-6 bg-card/50 backdrop-blur border-border hover:card-glow transition-all duration-300 h-full">
+              <Card className="p-6 bg-card/50 backdrop-blur border-border hover:card-glow transition-all duration-300 flex flex-col w-full">
                 <Quote className="w-8 h-8 text-primary/30 mb-4" />
-                <p className="text-foreground/80 mb-6 leading-relaxed">{rec.text}</p>
-                <div className="border-t border-border/50 pt-4">
+                <p className="text-foreground/80 mb-6 leading-relaxed flex-grow">{rec.text}</p>
+                <div className="border-t border-border/50 pt-4 mt-auto">
                   <h4 className="font-bold text-lg">{rec.name}</h4>
                   <p className="text-sm text-muted-foreground">{rec.title}</p>
                 </div>
