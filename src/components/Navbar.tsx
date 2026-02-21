@@ -43,6 +43,18 @@ const Navbar = () => {
     { label: "Contact", href: "#contact" },
   ];
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <nav
       ref={navRef}
@@ -67,6 +79,7 @@ const Navbar = () => {
               <a
                 key={item.href}
                 href={item.href}
+                onClick={(e) => handleNavClick(e, item.href)}
                 className="text-foreground/80 hover:text-primary transition-colors relative group"
               >
                 {item.label}
@@ -74,7 +87,7 @@ const Navbar = () => {
               </a>
             ))}
             <Button size="sm" asChild>
-              <a href="#contact">Hire Me</a>
+              <a href="#contact" onClick={(e) => handleNavClick(e, "#contact")}>Hire Me</a>
             </Button>
           </div>
 
@@ -97,14 +110,14 @@ const Navbar = () => {
                   <a
                     key={item.href}
                     href={item.href}
+                    onClick={(e) => handleNavClick(e, item.href)}
                     className="text-foreground/80 hover:text-primary transition-colors py-2 text-lg"
-                    onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.label}
                   </a>
                 ))}
                 <Button size="sm" className="w-full mt-2" asChild>
-                  <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
+                  <a href="#contact" onClick={(e) => handleNavClick(e, "#contact")}>
                     Hire Me
                   </a>
                 </Button>
