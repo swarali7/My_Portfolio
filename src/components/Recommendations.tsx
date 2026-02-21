@@ -22,7 +22,7 @@ const Recommendations = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="recommendations" className="py-24 px-4 bg-muted/30" ref={ref}>
+    <section id="recommendations" className="py-24 px-4" ref={ref}>
       <div className="container mx-auto max-w-6xl">
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-center mb-16"
