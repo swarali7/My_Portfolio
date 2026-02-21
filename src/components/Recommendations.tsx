@@ -8,13 +8,11 @@ const recommendations = [
   {
     name: "Vighnesh Maheshwari",
     title: "SysDev II at Amazon",
-    photo: "/placeholder.svg",
     text: "Swarali and I worked together at AWS during the Summer 2025. She's a focused engineer, who is willing to go the extra mile to achieve her goals. She was a pleasure to work with and She picked up the intricacies of package management for a unique OS like Bottlerocket pretty quickly, all while also learning Rust development, and also designing the project within AWS's unique toolchains. She was able to work independently but also knew when to ask questions to ensure maximum success. I am happy to have known her and look forward to following her career as she grows!",
   },
   {
     name: "Sunil Timalsina",
     title: "Software Development Manager at AWS | Building Open Source Software",
-    photo: "/placeholder.svg",
     text: "I had the pleasure of working with Swarali at AWS in Summer 2025. She's incredibly hardworking, quick to learn, and always focused on delivering results. Whether it was tackling technical tasks or collaborating with others, she consistently showed up with dedication and a great attitude. I was impressed with how quickly she ramped up into Rust development, building a deep understanding of Bottlerocket's architecture and how its packages are structured, built, and updated. She also demonstrated strong collaboration skills—working closely with mentors and teammates, asking thoughtful questions, and contributing meaningfully, sharing up to date information to stakeholders. I'm excited to see what she does next!",
   },
 ];
@@ -46,16 +44,9 @@ const Recommendations = () => {
               <Card className="p-6 bg-card/50 backdrop-blur border-border hover:card-glow transition-all duration-300 h-full">
                 <Quote className="w-8 h-8 text-primary/30 mb-4" />
                 <p className="text-foreground/80 mb-6 leading-relaxed">{rec.text}</p>
-                <div className="flex items-center gap-4">
-                  <img
-                    src={rec.photo}
-                    alt={rec.name}
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
-                  <div>
-                    <h4 className="font-semibold">{rec.name}</h4>
-                    <p className="text-sm text-muted-foreground">{rec.title}</p>
-                  </div>
+                <div className="border-t border-border/50 pt-4">
+                  <h4 className="font-bold text-lg">{rec.name}</h4>
+                  <p className="text-sm text-muted-foreground">{rec.title}</p>
                 </div>
               </Card>
             </motion.div>
